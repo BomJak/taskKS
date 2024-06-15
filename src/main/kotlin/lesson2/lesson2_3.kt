@@ -1,5 +1,9 @@
 package lesson2
 
+const val HOURS_IN_DAY = 24
+const val MINUTS_IN_HOUR = 60
+const val SECOUNDS_IN_MINUT = 60
+
 fun main() {
     var hourEndTravel = 0
     var minuteEndTravel = 0
@@ -8,20 +12,19 @@ fun main() {
     val hourStartTravel = 9
     val minuteStartTravel = 39
 
-    val hourInTravel = fullMinutesInTravel / 60
-    val minutesInTravel = fullMinutesInTravel % 60
+    val hourInTravel = fullMinutesInTravel / MINUTS_IN_HOUR
+    val minutesInTravel = fullMinutesInTravel % SECOUNDS_IN_MINUT
 
-    if ((minuteStartTravel + minutesInTravel) >= 60) {
+    minuteEndTravel = minuteStartTravel + minutesInTravel
+    if ((minuteEndTravel) >= MINUTS_IN_HOUR) {
         hourEndTravel += 1
-        minuteEndTravel = minuteStartTravel + minutesInTravel - 60
-    } else {
-        minuteEndTravel = minuteStartTravel + minutesInTravel
+        minuteEndTravel -= MINUTS_IN_HOUR
     }
 
-    if ((hourInTravel + hourStartTravel) >= 24) {
-        hourEndTravel += hourInTravel + hourStartTravel - 24
-    } else{
-        hourEndTravel += hourInTravel + hourStartTravel
+    hourEndTravel += hourInTravel + hourStartTravel
+
+    if ((hourEndTravel) >= HOURS_IN_DAY) {
+        hourEndTravel += hourEndTravel - HOURS_IN_DAY
     }
 
     print("$hourEndTravel:$minuteEndTravel")
