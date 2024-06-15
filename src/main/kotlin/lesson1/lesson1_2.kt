@@ -10,6 +10,6 @@ fun main() {
     var countWorkersOS: Int = 2000
     //println(countWorkersOS)
 
-    countWorkersOS -= 1
+    countWorkersOS = 1999
     println(countWorkersOS)
 }
