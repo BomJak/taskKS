@@ -5,6 +5,8 @@ fun main(){
     val secondScore: Int = 4
     val thirdScore: Int = 3
     val fourthScore: Int = 5
-    var arfMean: Float = (firstScore+secondScore+thirdScore+fourthScore)/4f
+    val countOfStudent = 4f
+
+    var arfMean: Float = (firstScore+secondScore+thirdScore+fourthScore)/countOfStudent
     println(String.format("%.2f",arfMean))
 }
