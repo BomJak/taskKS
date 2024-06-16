@@ -2,9 +2,6 @@ package lesson5
 
 fun main() {
     val winningVal = arrayOf((0..42).random(), (0..42).random(), (0..42).random())
-    for (i in 0..2) {
-        println(winningVal[i])
-    }
 
     var userInValue: Array<Int>
 
