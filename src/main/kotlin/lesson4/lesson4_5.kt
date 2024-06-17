@@ -11,19 +11,23 @@ fun main() {
     val shipWhole: Boolean = readLine().toBoolean()
 
     print("Введите количество экипажа: ")
-    val shipCrew: Int = readLine()!!.toInt()
+    val shipCrew: Int = readln().toInt()
 
     print("Введите количество провизии: ")
-    val shipFood: Int = readLine()!!.toInt()
+    val shipFood = readln().toInt()
 
     print("Благоприятные метеоусловия? (true/false): ")
-    val meteoDate: Boolean = readLine().toBoolean()
+    val meteoDate: Boolean = readln().toBoolean()
 
     println(
         "Корабыль может отправиться в плавание: " +
                 "${
-                    ((shipWhole == true) && (shipCrew in MIN_CREW_WHOLE_SHIP..MAX_CREW_WHOLE_SHIP) && (shipFood > NEEDFUL_FOOD))
-                            or ((shipWhole == false) && (shipCrew == NEED_CREW_BROKEN_SHIP) && (meteoDate == true) && (shipFood > NEEDFUL_FOOD))
+                    ((shipWhole == true) && (shipCrew in MIN_CREW_WHOLE_SHIP..MAX_CREW_WHOLE_SHIP)
+                            && (shipFood > NEEDFUL_FOOD))
+                            && ((shipWhole == false)
+                            && (shipCrew == NEED_CREW_BROKEN_SHIP)
+                            && (meteoDate == true)
+                            && (shipFood > NEEDFUL_FOOD))
                 }"
     )
 }
