@@ -12,7 +12,8 @@ fun main() {
     val curSeason = "зима"
 
     println(
-        "Благоприятные ли условия сейчас для роста бобовых? " +
-                "${(curValWeather == needValWeather) && (curValTent == needValTent) && (curValWet == needValWet) && !(curSeason == notNeedSeason)}"
+        "Благоприятные ли условия сейчас для роста бобовых? ${(curValWeather == needValWeather) && (curValTent == needValTent)
+                    && (curValWet == needValWet) && !(curSeason == notNeedSeason)
+        }"
     )
 }
