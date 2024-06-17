@@ -11,5 +11,5 @@ fun main(){
 
     val ost_hours = full_seconds / 3600
 
-    print("0$ost_hours:$ost_minute:0$ost_seconds")
+    print(String.format(("%02d:%02d:%02d"), ost_hours, ost_minute, ost_seconds))
 }
