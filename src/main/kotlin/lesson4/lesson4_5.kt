@@ -22,12 +22,13 @@ fun main() {
     println(
         "Корабыль может отправиться в плавание: " +
                 "${
-                    ((shipWhole == true) && (shipCrew in MIN_CREW_WHOLE_SHIP..MAX_CREW_WHOLE_SHIP)
-                            && (shipFood > NEEDFUL_FOOD))
-                            && ((shipWhole == false)
-                            && (shipCrew == NEED_CREW_BROKEN_SHIP)
-                            && (meteoDate == true)
-                            && (shipFood > NEEDFUL_FOOD))
+                    ((shipWhole == true) && 
+                            (shipCrew in MIN_CREW_WHOLE_SHIP..MAX_CREW_WHOLE_SHIP) &&
+                            (shipFood > NEEDFUL_FOOD)) &&
+                            ((shipWhole == false) &&
+                                    (shipCrew == NEED_CREW_BROKEN_SHIP) &&
+                                    (meteoDate == true) &&
+                                    (shipFood > NEEDFUL_FOOD))
                 }"
     )
 }
