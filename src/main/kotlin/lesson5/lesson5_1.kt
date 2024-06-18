@@ -4,8 +4,8 @@ const val WELCOME_TEXT = "Добро пожаловать!"
 const val NOT_WELCOME_TEXT = "Доступ запрещен."
 
 fun main() {
-    val firstValue = 8
-    val secondValue = 12
+    val firstValue = (0..9).random()
+    val secondValue = (0..9).random()
 
     print("Для входа решите задачку $firstValue + $secondValue = ")
 
