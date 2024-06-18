@@ -1,13 +1,17 @@
 package lesson5
 
-fun main() {
-    val winningVal = arrayOf((0..42).random(), (0..42).random(), (0..42).random())
+const val MIN_VALUE = 0
+const val MAX_VALUE = 42
 
-    var userInValue: Array<Int>
+fun main() {
+    val winningVal =
+        arrayOf((MIN_VALUE..MAX_VALUE).random(), (MIN_VALUE..MAX_VALUE).random(), (MIN_VALUE..MAX_VALUE).random())
+
+    val userInValue: Array<Int>
 
     println("Для участия в лотереи введите последовательно 3 числа в диапозоне от 0 до 42 включительно")
     println("Введите число: ")
-    userInValue = arrayOf(readLine()!!.toInt(), readLine()!!.toInt(), readLine()!!.toInt())
+    userInValue = arrayOf(readln().toInt(), readln().toInt(), readln().toInt())
 
     val intersectArr = winningVal.intersect(userInValue.toList())
 
